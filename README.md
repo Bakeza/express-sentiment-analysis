@@ -5,12 +5,12 @@ This is a simple web application demonstrating the use of Express.js for server-
 ## Table of Contents
 
 - [Installation](#installation)
+- [Setup](#setup)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
+- [Key Files](#key-files)
 - [Scripts](#scripts)
 - [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Installation
 
