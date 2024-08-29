@@ -9,6 +9,14 @@ describe("checkForName", () => {
     jest.resetAllMocks();
   });
 
+  it("should alert 'Please enter a valid name containing only alphabetic characters.' for invalid characters", () => {
+    const invalidInput = "1234";
+    checkForName(invalidInput);
+    expect(global.alert).toHaveBeenCalledWith(
+      "Please enter a valid name containing only alphabetic characters."
+    );
+  });
+
   it("should alert 'Welcome, Captain!' for a valid captain name", () => {
     const validName = "Picard";
     checkForName(validName);
