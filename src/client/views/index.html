@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Express sentiment analysis</title>
+    <title>Express Sentiment Analysis</title>
   </head>
 
   <body>
@@ -35,6 +35,23 @@
       <p>This is a footer</p>
     </footer>
 
-    <script type="module" src="js/formHandler.js"></script>
+    <script type="module" src="/js/formHandler.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/index.js")
+            .then((registration) => {
+              console.log(
+                "Service Worker registered with scope:",
+                registration.scope
+              );
+            })
+            .catch((error) => {
+              console.log("Service Worker registration failed:", error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
